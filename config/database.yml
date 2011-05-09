@@ -13,7 +13,7 @@ development:
   encoding: unicode
   database: EnglishNote
   pool: 5
-  username: EnglishNote
+  username: aloneness
   password: elqlrhdqn2
 
   # Connect on a TCP socket. Omitted by default since the client uses a
