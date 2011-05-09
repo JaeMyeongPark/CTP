@@ -11,6 +11,8 @@ EnglishNote::Application.routes.draw do
 
   resources :accounts
 
+  root :to => 'accounts#edit' 
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
