@@ -1,0 +1,31 @@
+<h1>Idioms#add</h1>
+<p>Find me in app/views/idioms/add.html.erb</p>
+
+
+<h1>Add New Idiom</h1>  
+
+<%= form_for @idiom do |f| %>  
+	<% if @idiom.errors.any? %>  
+		<div class="error_messages">  
+			<h2>Form is invalid</h2>  
+			<ul>  
+				<% for message in @idiom.errors.full_messages %>  
+					<li><%= message %></li>  
+				<% end %>  
+			</ul>  
+		</div>  
+	<% end %>  
+	<p>  
+		<%= f.label :idiom %><br />  
+		<%= f.text_area :idiom %>  
+	</p>  
+	<p>  
+		<%= f.label :tag %><br />  
+		<%= f.text_field :tag_string %>  
+	</p>  
+	<p>  
+		<%= f.label :description %> <br />
+		<%= f.text_area :description %>  
+	</p>  
+	<p class="button"><%= f.submit %></p>  
+<% end %>  

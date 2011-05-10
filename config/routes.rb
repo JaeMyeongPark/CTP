@@ -1,17 +1,20 @@
 EnglishNote::Application.routes.draw do
+  get "idioms/add"
+  get "idioms/edit"
+  get "idioms/remove"
+
   match 'account/edit' => 'accounts#edit', :as => :edit_current_account
-
   match 'signup' => 'accounts#new', :as => :signup
-
   match 'logout' => 'sessions#destroy', :as => :logout
-
   match 'login' => 'sessions#new', :as => :login
 
   resources :sessions
-
   resources :accounts
+  resources :idioms
 
-  root :to => 'accounts#edit' 
+#  map.search "idioms", controller: => "idioms"
+
+  root :to => 'idioms#show' 
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
